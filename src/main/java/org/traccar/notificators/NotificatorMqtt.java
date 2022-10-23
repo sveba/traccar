@@ -86,7 +86,7 @@ public final class NotificatorMqtt implements Notificator {
 
             // Create placeholders and substitutors map
             Map<String, String> values = new HashMap<String, String>();
-            //values.put("U", String.valueOf(userId)); //FixMe
+            values.put("U", String.valueOf(user.getId()));
             values.put("E", event.getType());
             values.put("D", String.valueOf(event.getDeviceId()));
             values.put("G", String.valueOf(event.getGeofenceId()));
